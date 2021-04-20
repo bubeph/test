@@ -14,8 +14,7 @@ jobs:
             # steps:
             cd test.bubeph.com &&
             rm -rf test  &&
-            git clone https://Badr182:Badr01230@github.com/bubeph/test.git &&            
-            cd test &&
+            git clone https://Badr182:Badr01230@github.com/bubeph/test.git            
             
           host: test.bubeph.com
           
