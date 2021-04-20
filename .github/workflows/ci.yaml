@@ -1,0 +1,28 @@
+name: Command via SSH
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: create folder via OPEN SSH Private Key
+        uses: bubeph/test-ci-cd@master
+        with:
+          command:
+            # steps:
+            cd test.bubeph.com &&
+            rm -rf test  &&
+            git clone https://Badr182:Badr01230@github.com/bubeph/test.git &&            
+            cd test &&
+            
+          host: test.bubeph.com
+          
+          port: 21098          
+          username: bubexctm          
+          passphrase: ddZiTOArK.3r
+          privateKey: ${{ secrets.KEY_PASS_SSH }}
+          
+        env:
+          CI: true      
